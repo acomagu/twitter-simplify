@@ -1,0 +1,121 @@
+/* ==UserStyle==
+@name         Simple Twitter
+@namespace    github.com/acomagu/simplify-twitter
+@version      1.0.0
+@license      MIT
+@preprocessor stylus
+@var checkbox show-logo "Show Logo" 0
+@var checkbox show-sidemenu-home 'Show "Home"' 0
+@var checkbox show-sidemenu-explore 'Show "Explore"' 0
+@var checkbox show-sidemenu-notifications 'Show "Notifications"' 0
+@var checkbox show-sidemenu-messages 'Show "Messages"' 0
+@var checkbox show-sidemenu-bookmarks 'Show "Bookmarks"' 0
+@var checkbox show-sidemenu-lists 'Show "Lists"' 0
+@var checkbox show-sidemenu-profile 'Show "Profile"' 0
+@var checkbox show-sidemenu-more 'Show "More"' 0
+@var checkbox show-sidemenu-tweet 'Show "Tweet" Button' 0
+@var checkbox show-sidemenu-label 'Show Left-Side Column Label' 0
+@var range leftside-column-opacity 'Left-Side Column Opacity' [1, 0, 1, 0.05, ""]
+@var range rightside-column-opacity 'Right-Side Column Opacity' [1, 0, 1, 0.05, ""]
+@var checkbox show-main-column-border-topbottom 'Show Main Column Border Top&Bottom' 1
+@var checkbox show-main-column-border-leftright 'Show Main Column Border Left&Right' 0
+@var checkbox transparent-rightside-column-background 'Transparent Right-Side Column Background' 1
+@var checkbox show-rightside-column-border 'Show Right-Side Column Border' 0
+==/UserStyle== */
+
+@-moz-document domain("twitter.com") {
+  header h1 > a[href="/home"] {
+    if not show-logo {
+      display: none;
+    }
+  }
+  header nav > a[href="/home"] {
+    if not show-sidemenu-home {
+      display: none;
+    }
+  }
+  header nav > a[href="/explore"] {
+    if not show-sidemenu-explore {
+      display: none;
+    }
+  }
+  header nav > a[href="/notifications"] {
+    if not show-sidemenu-notifications {
+      display: none;
+    }
+  }
+  header nav > a[href="/messages"] {
+    if not show-sidemenu-messages {
+      display: none;
+    }
+  }
+  header nav > a[href$="/bookmarks"] {
+    if not show-sidemenu-bookmarks {
+      display: none;
+    }
+  }
+  header nav > a[href$="/lists"] {
+    if not show-sidemenu-lists {
+      display: none;
+    }
+  }
+  header nav > div:nth-of-type(1) > a {
+    if not show-sidemenu-profile {
+      display: none;
+    }
+  }
+  header nav > div:nth-of-type(2) {
+    if not show-sidemenu-more {
+      display: none;
+    }
+  }
+  header a[href="/compose/tweet"] {
+    if not show-sidemenu-tweet {
+      display: none;
+    }
+  }
+
+  header h1 > a[href="/home"] > div > div:nth-of-type(2),
+  header nav > a[href="/home"] > div > div:nth-of-type(2),
+  header nav > a[href="/explore"] > div > div:nth-of-type(2),
+  header nav > a[href="/notifications"] > div > div:nth-of-type(2),
+  header nav > a[href="/messages"] > div > div:nth-of-type(2),
+  header nav > a[href$="/bookmarks"] > div > div:nth-of-type(2),
+  header nav > a[href$="/lists"] > div > div:nth-of-type(2),
+  header nav > div:nth-of-type(1) > a > div > div:nth-of-type(2),
+  header nav > div:nth-of-type(2) > div > div:nth-of-type(2),
+  header a[href="/compose/tweet"] > div > div:nth-of-type(2) {
+    if not show-sidemenu-label {
+      display: none;
+    }
+  }
+
+  header {
+    opacity: rightside-column-opacity;
+  }
+
+  div[data-testid="sidebarColumn"] {
+    opacity: leftside-column-opacity;
+  }
+
+  div[data-testid="primaryColumn"],
+  div[data-testid="primaryColumn"] section > div > div > div > div > div {
+    if not show-main-column-border-topbottom {
+      border-top: transparent;
+      border-bottom: transparent;
+    }
+    if not show-main-column-border-leftright {
+      border-left: transparent;
+      border-right: transparent;
+    }
+  }
+
+  div[data-testid="sidebarColumn"] .css-1dbjc4n {
+    if transparent-rightside-column-background {
+      background-color: transparent;
+    }
+    if not show-rightside-column-border {
+      border: none;
+    }
+  }
+}
