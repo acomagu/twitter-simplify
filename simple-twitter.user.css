@@ -59,12 +59,12 @@
       display: none;
     }
   }
-  header nav > div:nth-of-type(1) > a {
+  header nav > a:nth-last-of-type(1) {
     if not show-sidemenu-profile {
       display: none;
     }
   }
-  header nav > div:nth-of-type(2) {
+  header nav > div:nth-of-type(1) {
     if not show-sidemenu-more {
       display: none;
     }
@@ -82,8 +82,8 @@
   header nav > a[href="/messages"] > div > div:nth-of-type(2),
   header nav > a[href$="/bookmarks"] > div > div:nth-of-type(2),
   header nav > a[href$="/lists"] > div > div:nth-of-type(2),
-  header nav > div:nth-of-type(1) > a > div > div:nth-of-type(2),
-  header nav > div:nth-of-type(2) > div > div:nth-of-type(2),
+  header nav > div:nth-last-of-type(1) > a > div > div:nth-of-type(2),
+  header nav > div:nth-of-type(1) > div > div:nth-of-type(2),
   header a[href="/compose/tweet"] > div > div:nth-of-type(2) {
     if not show-sidemenu-label {
       display: none;
