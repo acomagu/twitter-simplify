@@ -5,14 +5,14 @@
 @license      MIT
 @preprocessor stylus
 @var checkbox show-logo "Show Logo" 0
-@var checkbox show-sidemenu-home 'Show "Home"' 0
+@var checkbox show-sidemenu-home 'Show "Home"' 1
 @var checkbox show-sidemenu-explore 'Show "Explore"' 0
-@var checkbox show-sidemenu-notifications 'Show "Notifications"' 0
+@var checkbox show-sidemenu-notifications 'Show "Notifications"' 1
 @var checkbox show-sidemenu-messages 'Show "Messages"' 0
 @var checkbox show-sidemenu-bookmarks 'Show "Bookmarks"' 0
 @var checkbox show-sidemenu-lists 'Show "Lists"' 0
 @var checkbox show-sidemenu-profile 'Show "Profile"' 0
-@var checkbox show-sidemenu-more 'Show "More"' 0
+@var checkbox show-sidemenu-more 'Show "More"' 1
 @var checkbox show-sidemenu-tweet 'Show "Tweet" Button' 0
 @var checkbox show-sidemenu-label 'Show Left-Side Column Label' 0
 @var range leftside-column-opacity 'Left-Side Column Opacity' [1, 0, 1, 0.05, ""]
