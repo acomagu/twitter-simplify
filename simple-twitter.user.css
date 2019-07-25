@@ -19,7 +19,7 @@
 @var range rightside-column-opacity 'Right-Side Column Opacity' [1, 0, 1, 0.05, ""]
 @var checkbox show-main-column-border-topbottom 'Show Main Column Border Top&Bottom' 1
 @var checkbox show-main-column-border-leftright 'Show Main Column Border Left&Right' 0
-@var checkbox transparent-rightside-column-background 'Transparent Right-Side Column Background' 1
+@var checkbox transparent-rightside-column-background 'Transparent Right-Side Column Background' 0
 @var checkbox show-rightside-column-border 'Show Right-Side Column Border' 0
 ==/UserStyle== */
 
