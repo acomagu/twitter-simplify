@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Simple Twitter
 @namespace    github.com/acomagu/simplify-twitter
-@version      1.1.0
+@version      1.2.0
 @license      MIT
 @preprocessor stylus
 @var checkbox show-logo "Show Logo" 0
@@ -15,6 +15,7 @@
 @var checkbox show-sidemenu-more 'Show "More"' 1
 @var checkbox show-sidemenu-tweet 'Show "Tweet" Button' 0
 @var checkbox show-sidemenu-label 'Show Left-Side Column Label' 0
+@var checkbox show-dmdrawer 'Show Direct Message Drawer' 0
 @var checkbox show-accountswitcher-label 'Show Account Switcher Label' 1
 @var range leftside-column-opacity 'Left-Side Column Opacity' [1, 0, 1, 0.05, ""]
 @var range rightside-column-opacity 'Right-Side Column Opacity' [1, 0, 1, 0.05, ""]
@@ -93,6 +94,12 @@
 
   div[data-testid=SideNav_AccountSwitcher_Button]>:not(:first-child) {
     if not show-accountswitcher-label {
+      display: none;
+    }
+  }
+
+  div[data-testid=DMDrawer] {
+    if not show-dmdrawer {
       display: none;
     }
   }
